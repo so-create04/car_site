@@ -1,0 +1,126 @@
+@use "./mixin" as *;
+
+.about-page {
+    width: 100%;
+
+    .top {
+        width: 100%;
+        height: 100vh;
+        background-image: url(/images/S__17260553.jpg);
+        background-size: cover;
+        background-position: center;
+        background-repeat : no-repeat;
+        background-attachment: fixed;
+        opacity: 0; // 初期状態を透明に設定
+        transition: opacity 2s ease-in-out, transform 1s ease-in-out;
+
+        .top-title {
+            text-align: center;
+            padding-top: 20%;
+
+            &__main {
+                font-size: 5rem;
+                color: white;
+                text-shadow: white 2px 2px 5px;
+            }
+        }
+    }
+    .about-container {
+        width: 100%;
+        background-color: #808080;
+
+        .container {
+            width: 100%;
+
+            &__subtitle {
+                font-size: 2.5rem;
+                margin-top: 60px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 3s;
+                transform: translateY(150px);
+                display: block;
+                text-align: center;
+                color: black;
+            }
+            &__text {
+                font-size: 1.5rem;
+                margin-top: 20px;
+                margin-bottom: 40px;
+                opacity: 0;
+                visibility: hidden;
+                transition: all 2s;
+                transform: translateY(250px);
+                display: block;
+                text-align: center;
+                color: black;
+            }
+            .is-active {
+                opacity: 1;
+                visibility: visible;
+                transform: translateY(0);
+            }
+            .slider{
+                width: 94%;
+                margin:0 auto ;
+            }
+            
+            .slider img{
+                width: 100%;
+                height: auto;
+            }
+            
+            .slider .slick-slide{
+                margin: 0 10px;
+            }
+            
+            .slick-prev, 
+            .slick-next {
+                position: absolute;/*絶対配置にする*/
+                top: 42%;
+                cursor: pointer;/*マウスカーソルを指マークに*/
+                outline: none;/*クリックをしたら出てくる枠線を消す*/
+                border-top: 2px solid #666;/*矢印の色*/
+                border-right: 2px solid #666;/*矢印の色*/
+                height: 15px;
+                width: 15px;
+            }
+            
+            .slick-prev {/*戻る矢印の位置と形状*/
+                left: -1.5%;
+                transform: rotate(-135deg);
+            }
+            
+            .slick-next {/*次へ矢印の位置と形状*/
+                right: -1.5%;
+                transform: rotate(45deg);
+            }
+            
+            /*ドットナビゲーションの設定*/
+            
+            .slick-dots {
+                text-align:center;
+                margin:20px 0 0 0;
+            }
+            
+            .slick-dots li {
+                display:inline-block;
+                margin:0 5px;
+            }
+            
+            .slick-dots button {
+                color: transparent;
+                outline: none;
+                width:8px;/*ドットボタンのサイズ*/
+                height:8px;/*ドットボタンのサイズ*/
+                display:block;
+                border-radius:50%;
+                background:#ccc;/*ドットボタンの色*/
+            }
+            
+            .slick-dots .slick-active button{
+                background:#333;/*ドットボタンの現在地表示の色*/
+            }
+        }
+    }
+}

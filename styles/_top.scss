@@ -1,0 +1,403 @@
+@use "./mixin" as *;
+
+.top {
+    // hero section
+    .hero {
+        background-image: url(/images/main-visual.jpg);
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+
+        .hero-title {
+            transform: translateY(450px);
+            position: relative;
+            z-index: 3;
+            color: white;
+            text-shadow: white 2px 2px 5px;
+
+            &__main {
+                font-size: 3.5rem;
+                margin-left: 5%;
+            }
+            &__sub {
+                font-size: 1.5rem;
+                margin-left: 8%;
+            }
+        }
+    }
+
+    // works section
+    .works {
+        .works-title {
+            text-align: center;
+            text-shadow: black 2px 2px 5px;
+
+            &__main {
+                font-size: 2.5rem;
+            }
+            &__sub {
+                font-size: 1.5rem;
+            }
+        }
+        .works-products {
+            display: flex;
+            margin-top: 40px;
+            justify-content: space-around;
+            @include w1200 {
+                flex-wrap: wrap;
+                align-items: center;
+            }
+
+            &__item {
+                border-top: 1px solid black;
+                border-left: 1px solid black;
+                border-radius: 10px;
+                width: 350px;
+                height: 350px;
+                background-color: rgba(0, 0, 0, 0.1);
+                box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+                overflow: hidden;
+                @include w1200 {
+                    margin-top: 20px;
+                }
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+                img:hover {
+                    transform: scale(1.2, 1.2);
+                    transition: 1s all;
+                }
+                a {
+                    display: block;
+                    width: 150px;
+                    height: 30px;
+                    margin-inline: auto;
+                    margin-top: 40px;
+                    text-align: center;
+                    padding-top: 4px;
+                    border-radius: 15px;
+                    color: white;
+                    background-color: black;
+                    box-shadow: black 2px 2px 10px;
+                }
+                a:hover {
+                    transform: scale(1.1);
+                    transition: 0.5s;
+                    color: gold;
+                }
+            }
+        }
+    }
+
+    // about section
+    .about {
+        background-image: url(/images/about-visual.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+
+        .about-title {
+            text-align: center;
+            color: white;
+            text-shadow: white 2px 2px 5px;
+
+            &__main {
+                font-size: 2.5rem;
+            }
+            &__sub {
+                font-size: 1.5rem;
+            }
+        }
+        .about-comment {
+            color: white;
+            font-size: 1.5rem;
+            text-shadow: white 2px 2px 5px;
+            letter-spacing: 0.2rem;
+            text-align: right;
+            margin-top: 100px;
+            @include w991 {
+                text-align: center;
+            }
+
+            &__start {
+                width: 100%;
+                justify-content: right;
+                @include w991 {
+                    justify-content: center;
+                }
+
+                h2 {
+                    display: inline-block;
+                    font-size: 2rem;
+                    width: 40%;
+                    margin-right: 10%;
+                    margin-bottom: 10px;
+                    @include w991 {
+                        width: 90%;
+                        margin: 20px auto;
+                    }
+                }
+                p {
+                    display: inline-block;
+                    width: 40%;
+                    margin-right: 10%;
+                    @include w991 {
+                        width: 90%;
+                        margin: 0 auto;
+                    }
+                }
+            }
+            &__end {
+                position: absolute;
+                width: 100%;
+                bottom: 30%;
+                @include w991 {
+                    margin-top: 200px;
+                    position: relative;
+                }
+
+                h2 {
+                    font-size: 2rem;
+                    width: 40%;
+                    margin-left: 10%;
+                    margin-bottom: 10px;
+                    @include w991 {
+                        width: 90%;
+                        margin: 20px auto;
+                    }
+                }
+                p {
+                    width: 40%;
+                    margin-left: 10%;
+                    @include w991 {
+                        width: 90%;
+                        margin: 20px auto;
+                    }
+                }
+                a {
+                    display: block;
+                    width: 40%;
+                    margin-left: 10%;
+                    margin-top: 10px;
+                    font-size: 1rem;
+                    @include w991 {
+                        width: 90%;
+                        margin: 20px auto;
+                    }
+
+                    span {
+                        width: 1rem;
+                        height: auto;
+
+                        img {
+                            width: 1.5rem;
+                        }
+                        img:hover {
+                            position: relative;
+                            left: 10px;
+                            transition: 1s;
+                        }
+                    }
+                }
+                a:hover {
+                    color: gold;
+                    transition: 0.5s;
+                }
+            }
+        }
+    }
+
+    // news section
+    .news {
+        .news-title {
+            text-align: center;
+            text-shadow: black 2px 2px 5px;
+
+            &__main {
+                font-size: 2.5rem;
+            }
+        }
+        .news-list {
+            width: 90%;
+            margin: 20px auto;
+            border-top: 2px solid black;
+            ul {                
+                li {
+                    margin-block: 15px;
+                    border-bottom: 1px solid #808080;
+                    display: flex;
+
+                    span {
+                        margin-right: 20px;
+                    }
+                }
+                li:hover {
+                    text-decoration: 2px underline black;
+                }
+            }
+        }
+    }
+
+    // access section
+    .access {
+        background-image: url(/images/access-visual.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+
+        .access-title {
+            text-align: center;
+            text-shadow: black 2px 2px 5px;
+
+            &__main {
+                color: white;
+                font-size: 2.5rem;
+                text-shadow: white 2px 2px 5px;
+            }
+        }
+        .access-map {
+            margin-top: 5%;
+            margin-inline: auto;
+            width: 60%;
+            @include w800 {
+                width: 90%;
+            }
+        }
+    }
+
+
+    // contact section
+    .contact {
+        .contact-title {
+            text-align: center;
+            text-shadow: black 2px 2px 5px;
+
+            &__main {
+                font-size: 2.5rem;
+            }
+            &__sub {
+                font-size: 1.5rem;
+            }
+        }
+        .contact-list {
+            display: flex;
+            justify-content: center;
+            margin-top: 40px;
+            @include w1200 {
+                flex-wrap: wrap;
+            }
+
+            &__block {
+                width: 350px;
+                height: 50px;
+                display: flex;
+                align-items: center;
+                border: black solid 2px;
+                margin-inline: 20px;
+                box-shadow: black 2px 2px 10px;
+                @include w1200 {
+                    margin-block: 20px;
+                }
+            }
+            &__block:hover {
+                box-shadow: none;
+                position: relative;
+                top: 4px;
+            }
+        }
+        .contact-details {
+            width: 400px;
+            height: 50px;
+            margin-top: 30px;
+            margin-inline: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            box-shadow: black 2px 2px 10px;
+            background-color: black;
+            border-radius: 5px;
+            @include w500 {
+                width: 350px;
+            }
+
+            &__btn {
+                justify-content: center;
+                color: white; 
+            }
+        }
+        .contact-details:hover {
+            box-shadow: none;
+            position: relative;
+            top: 4px;
+            color: gold;
+        }
+    }
+
+    // form section
+    .form {
+        background-image: url(/images/form-visual.jpg);
+        background-size: cover;
+        background-attachment: fixed;
+        position: relative;
+
+        .form-title {
+            text-align: center;
+            
+            h2 {
+                color: white;
+                font-size: 2.5rem;
+                text-shadow: white 2px 2px 5px;
+            }
+        }
+        .form-area {
+            width: 35%;
+            font-size: 14px;
+            margin-left: 15%;
+            align-items: center;
+            margin-top: 5%;
+            @include w991 {
+                width: 90%;
+                margin-inline: auto;
+            }
+
+            input {
+                width: 100%;
+                background-color: white;
+                height: 2.5rem;
+                margin-bottom: 2rem;
+                border-radius: 3px;
+                box-shadow: white 2px 2px 4px;
+            }
+            textarea {
+                background-color: white;
+                width: 70%;
+                border-radius: 3px;
+                margin-bottom: 2rem;
+                box-shadow: white 2px 2px 4px;
+                @include w991 {
+                    width: 100%;
+                }
+            }
+            button {
+                width: 90px;
+                display: block;
+                height: 45px;
+                background-color: #808080;
+                border-radius: 3px;
+                color: white;
+                text-align: center;
+                @include w991 {
+                    margin-inline: auto;
+                }
+            }
+            button:hover {
+                background-color: gold;
+                color: black;
+                transition: 0.3s;
+            }
+        }
+    }
+}

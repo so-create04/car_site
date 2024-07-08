@@ -1,0 +1,119 @@
+@use "./mixin" as *;
+
+.header {
+    position: fixed;
+    display: flex;
+    z-index: 1000;
+    padding: 2.5rem 5rem;
+    justify-content: space-between;
+    @include w991 {
+        padding-left: 1.5rem;
+    }
+
+    &__logo-title {
+        h2 {
+            color: black;
+            font-size: 30px;
+            font-weight: 700;
+            text-shadow: #808080 3px 2px 5px;
+        }
+    }
+    &__menu-bar {
+        width: 50%;
+        display: flex;
+        align-items: center;
+        margin-right: 100px;
+        transition: all 0.5s;
+        @include w991 {
+            margin-right: 50px;
+        }
+
+        ul {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+
+            li {
+                color: white;
+                text-shadow: black 2px 2px 5px;
+            }
+            li a:hover {
+                color: gold;
+                transition: 0.5s;
+                text-shadow: white 2px 2px 5px;
+            }
+        }
+    }
+    &__side-bar {
+        position: absolute;
+        right: 0;
+        top: 10rem;
+        z-index: 1100;
+
+        ul {
+            flex-direction: column;
+
+            li {
+                margin-top: 70px;
+            }
+            li a {
+                color: black;
+                font-size: 1.5rem;
+            }
+        }
+    }
+    .close {
+        display: none;
+        transition: all 0.5s;
+    }
+    &__toggle-btn {
+        position: fixed;
+        right: 30px;
+        width: 40px;
+        height: 40px;
+        cursor: pointer;
+        transition: all 0.5s;
+        z-index: 1100;
+
+        .menu-open {
+            display: block;
+            z-index: 1100;
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .toClose {
+            display: none;
+        }
+        .menu-close {
+            display: none;
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .toOpen {
+            display: block;
+        }
+    }
+    &__mask {
+        display: none;
+    }
+    &__maskOpen {
+        display: block;
+        background-color: #808080;
+        opacity: 0.8;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        position: fixed;
+    }
+}

@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>contact</title>
+    <link rel="stylesheet" href="/styles/destyle.css">
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <!-- loading animation -->
+    <div class="load-section">
+        <div class="loader">
+            <span style="--i:1;"></span>
+            <span style="--i:2;"></span>
+            <span style="--i:3;"></span>
+            <span style="--i:4;"></span>
+            <span style="--i:5;"></span>
+            <span style="--i:6;"></span>
+            <span style="--i:7;"></span>
+            <span style="--i:8;"></span>
+            <span style="--i:9;"></span>
+            <span style="--i:10;"></span>
+            <span style="--i:11;"></span>
+            <span style="--i:12;"></span>
+            <span style="--i:13;"></span>
+            <span style="--i:14;"></span>
+            <span style="--i:15;"></span>
+            <span style="--i:16;"></span>
+            <span style="--i:17;"></span>
+            <span style="--i:18;"></span>
+            <span style="--i:19;"></span>
+            <span style="--i:20;"></span>
+        </div>
+    </div>
+    
+    <!-- header section -->
+    <header class="header w-100">
+        <div class="header__logo-title vi-hi">
+            <h2 class="">company name</h2>
+        </div>
+        <div class="header__menu-bar vi-hi">
+            <ul class="">
+                <li><a href="/index.html">Top</a></li>
+                <li><a href="/pages/works.html">Works</a></li>
+                <li><a href="/pages/about.html">Company</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </div>
+        <div class="header__toggle-btn">
+            <div class="menu-open">
+                <img src="/images/menu-open.svg" alt="">
+            </div>
+            <div class="menu-close">
+                <img src="/images/menu-close.svg" alt="">
+            </div>
+        </div>
+        <div class="header__mask"></div>
+    </header>
+
+
+    <main class="main contact-page">
+        <div class="container w-100 vh-100">
+            <div class="contact-title">
+                <h2>Contact</h2>
+            </div>
+            <div class="container__list">
+                <div class="container__block">
+                    <div class="container__item">
+                        <img src="/images/twitter-icon.svg" alt="">
+                        <a href="">X (twitter)</a>
+                        <a href="" class="container__item--btn">xxxxxxx</a>
+                    </div>
+                </div>
+                <div class="container__block">
+                    <div class="container__item">
+                        <img src="/images/instagram-icon.svg" alt="">
+                        <a href="">Instagram</a>
+                        <a href="" class="container__item--btn">xxxxxxx</a>
+                    </div>
+                </div>
+                <div class="container__block">
+                    <div class="container__item">
+                        <img src="/images/Email-icon.svg" alt="">
+                        <a href="">E-mail</a>
+                        <a href="" class="container__item--btn">xxxxx@.co.jp</a>
+                    </div>
+                </div>
+                <div class="container__block">
+                    <div class="container__item">
+                        <img src="/images/tel-icon.svg" alt="">
+                        <a href="">Tel</a>
+                        <a href="" class="container__item--btn">xxxx-xxxx-xxxx</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- footer section -->
+    <footer class="footer  vi-hi">
+        <div class="container">
+            <div class="footer-logo">
+                <h2 class="footer-logo__title">company name</h2>
+            </div>
+            <div class="footer-menu">
+                <ul class="footer-menu__block">
+                    <li class="footer-menu__block-item"><a href="/index.html">Top</a></li>
+                    <li class="footer-menu__block-item"><a href="/pages/works.html">Works</a></li>
+                    <li class="footer-menu__block-item"><a href="/pages/about.html">Company</a></li>
+                    <li class="footer-menu__block-item"><a href="#">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- scripts  -->
+    <script src="/js/main.js"></script>
+    <script src="/js/vanilla-tilt.js"></script>
+    <script type="text/javascript">
+        VanillaTilt.init(document.querySelector(".container__item"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+        
+        //It also supports NodeList
+        VanillaTilt.init(document.querySelectorAll(".container__item"), {
+            max: 25,
+            speed: 400,
+            glare: true,
+            "max-glare": 1,
+        });
+    </script>
+    <script src="/js/loading.js"></script>
+</body>
+</html>
